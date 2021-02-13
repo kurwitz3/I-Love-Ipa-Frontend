@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I Love IPA</title>
+        <link rel="stylesheet" href="css/index.css">
+        
+    </head>
+    <body>
+        <h1>Find your Favorite IPA!</h1>
+       
+       
+        
+      <div id=beer-list></div><br>
+        <div id="mySidenav" class="sidenav">
+            <div class="form">
+              <form id="add-form"  data-action="create">
+                  <h3>Add Your Favorite IPA!</h3>
+                <div class="input-field">
+                    <label for="beer_name">Beer Name:</label>
+                  <input type="text" name="beer_name" id="beer_name">
+                
+                </div><br>
+        
+                <div class="input-field">
+                    <label for="beer_style">Beer Style:</label>
+                  <input type="text" name="style" id="style">
+                 
+                </div><br>
+
+                <div class="input-field">
+                    <label for="ibu">Ibu:</label>
+                    <input type="number" name="ibu" id="ibu">
+                    
+                  </div><br>
+
+                  <div class="input-field">
+                    <label for="alcohol_percentage">Alcohol Percentage:</label>
+                    <input type="number" name="alcohol_percentage" id="alcohol_percentage">
+                    
+                  </div><br>
+
+                  <div class="input-field">
+                    <label for="link">Brewery Website Link:</label>
+                    <input type="url" name="link" id="link">
+                   
+                  </div><br>
+
+                  <div class="input-field">
+                    <label for="image">Url Link For Beer Image:</label>
+                    <input type="url" name="image" id="image">
+                    
+                  </div><br>
+                  <input type="submit" value="Add Beer" class="btn">
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="comment-list"></div>
+            
+        
+      <script type="text/javascript" src="javascript/models/comment.js"></script>
+        <script type="text/javascript" src="javascript/models/beer.js"></script>
+        <script type="text/javascript" src="javascript/services/API.js"></script>
+        <script type="text/javascript" src="javascript/index.js"></script>
+
+    </body>
+</html>
