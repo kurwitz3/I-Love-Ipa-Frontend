@@ -1,6 +1,7 @@
 class Beer{
-    constructor({beer_name,beer_style,ibu,alcohol_percentage,
+    constructor({id,beer_name,beer_style,ibu,alcohol_percentage,
         link,image,likes}){
+            this.id = id
             this.beer_name = beer_name
             this.beer_style = beer_style
             this.ibu = ibu
@@ -21,7 +22,7 @@ class Beer{
 
     beerHTML(){
       return `
-        <div class="card">
+       
           <h2 class="beer-name" align='center'>${this.beer_name}</h2>
           <img class="img" src='${this.image}'>
           <p>Style: ${this.beer_style}</p>
@@ -43,7 +44,8 @@ class Beer{
                </form>
              </div>
            <a href=${this.link} class="link"> Brewery Website</a><br>
-        </div>`
+        `
     }
-}
 
+
+}
