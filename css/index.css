@@ -1,0 +1,136 @@
+body{
+    background:url('https://cdn.pixabay.com/photo/2015/03/30/13/29/bar-699046_960_720.jpg')
+}
+.img{
+    height: 400px;
+    width: auto;
+
+}
+.card{
+    
+        float: left;
+        background: rgb(7, 7, 7);
+        padding: 10px 10px;
+        margin-right: 10px;
+        max-width: 425px;
+      
+
+    
+}
+h2{
+ color: rgb(252, 251, 251);
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 25px;
+}
+p{
+    text-align: center;
+    color: rgb(252, 251, 251);
+    font-size: 30px;
+    
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(250, 248, 248);
+    font-family: 'Courier New', Courier, monospace;
+    position: sticky;
+}
+.link{
+    color: rgb(41, 4, 249);
+    font-size: 30px;
+    text-align: center;
+}
+.likes-button{
+   margin-left:175px ;
+}
+div.form{
+
+    display: block;
+    text-align: left;
+
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.wrapper{
+    min-height: 20px;
+    background-color: rgb(7, 0, 0);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 16px auto;
+    max-width: 450px;
+    padding: 5%; /* 18px / 800px */
+    width: 20%;
+    color:  rgb(250, 246, 246);
+    font-size: 25px;
+}
+h3{
+    font-size: 35px;
+    color: rgb(244, 241, 241);
+}
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0px;
+    background-color: rgb(7, 7, 7); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    color: rgb(250, 248, 248);
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+#beer-list {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    position: relative;
+  
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+#beer-list {
+    transition: margin-right .25s;
+    padding: 5px;
+  }
+  .comment-form{
+      color: #f1f1f1;
+      text-align: center;
+  }
+  .content{
+      font-size:20px ;
+  }
+  .comments{
+    float: right;
+    background: rgb(7, 7, 7);
+    padding: 10px 10px;
+    margin-right: 10px;
+    max-width: 425px;
+  
+  }
