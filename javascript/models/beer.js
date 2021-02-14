@@ -9,4 +9,14 @@ class Beer{
             this.image = image
             this.likes = likes  
     }
+
+    renderBeerCard(){
+        const beerDiv = document.getElementById('beer-list')
+        const beerContainer = document.createElement('div')
+        beerContainer.id = `Beer${this.id}`
+        beerContainer.className = "card"
+        beerContainer.innerHTML += this.beerHTML()
+        beerDiv.appendChild(beerContainer)
+    }
 }
+
