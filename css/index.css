@@ -29,6 +29,14 @@ p{
     font-size: 30px;
     
 }
+.heading{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(250, 248, 248);
+    font-family: 'Courier New', Courier, monospace;
+    position: sticky;
+    margin-right: 260px;
+}
 h1{
     text-align: center;
     font-size: 50px;
@@ -40,9 +48,10 @@ h1{
     color: rgb(41, 4, 249);
     font-size: 30px;
     text-align: center;
+    margin-left: 100px;
 }
-.likes-button{
-   margin-left:175px ;
+.like-btn{
+   margin-left:130px ;
 }
 div.form{
 
@@ -58,12 +67,13 @@ form
     text-align: left;
 }
 .wrapper{
+  position: relative;
     min-height: 20px;
     background-color: rgb(7, 0, 0);
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
+    margin-left: 1200px  ;
     max-width: 450px;
     padding: 5%; /* 18px / 800px */
     width: 20%;
@@ -104,7 +114,8 @@ h3{
 
 /* Style page content */
 #beer-list {
-    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-left: 215px ; /* Same as the width of the sidebar */
+    margin-right: 350px ;
     padding: 0px 10px;
     position: relative;
   
@@ -135,3 +146,24 @@ h3{
     max-width: 425px;
   
   }
+  .comment {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 450px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: rgb(7, 7, 7); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  .dropdown{
+    font: #f1f1f1; 
+  }
+  
+  
+  
+
+  
+  
