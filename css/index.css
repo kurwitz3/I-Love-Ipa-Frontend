@@ -150,12 +150,14 @@ h3{
     font: #f1f1f1; 
   }
   .comment-form{
-      margin-left: 100px;
+      margin-left: 50px;
   }
   #comment{
       color: #f1f1f1;
       font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
   }
+  
   
   
   

@@ -1,5 +1,7 @@
 const addBeerForm = document.getElementById('add-form')
 let beerDiv = document.getElementById('beer-list')
+const commentContainer = document.getElementById('cmt')
+const allCbtn = document.getElementById('all-comments')
 const ibuButton = document.getElementById('sort-ibu')
 const apButton = document.getElementById('sort-Ap')
 const commentUrl = 'http://localhost:3000/comments'
@@ -71,9 +73,11 @@ function createBeer(e){
       },
       body: JSON.stringify(formData)
     }
-    fetch('http://localhost:3000/comments',configObj)
+    fetch(commentUrl,configObj)
       .then(resp => resp.json())
-      .then(json => { new Comment(json)})
+      .then(json => { new Comment(json)
+      
+      })
   }
 
 

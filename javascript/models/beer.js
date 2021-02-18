@@ -20,6 +20,9 @@ class Beer{
     const input = document.createElement('input')
       input.type = 'text'
       form.appendChild(input)
+    const commentBtn = document.createElement('button')
+      commentBtn.id = 'comment-btn'
+      commentBtn.innerText = 'View Comments'
     const formBtn = document.createElement('button')
       formBtn.value = 'submit'
       formBtn.innerText = 'Add Comment'
@@ -28,18 +31,20 @@ class Beer{
       p.innerText = `${this.likes} Likes`
       p.className = 'like-p'
     const button = document.createElement('button')
-    button.classList.add('like-btn')
-    button.id = 'like-btn'
-    button.innerText = 'Like'
+      button.classList.add('like-btn')
+      button.id = 'like-btn'
+      button.innerText = 'Like'
     beerContainer.id = `${this.id}`
     beerContainer.setAttribute('class','card')
     beerContainer.innerHTML += this.beerHTML()
     beerDiv.appendChild(beerContainer)
     beerContainer.appendChild(form)
+    beerContainer.appendChild(commentBtn)
     beerContainer.appendChild(p)
     beerContainer.appendChild(button)
     button.addEventListener('click',(e) => this.updateLikes(e))
     form.addEventListener('submit',createComment)
+    commentBtn.addEventListener('click',() => this.filterComments())
   }  
 
     beerHTML(){
@@ -81,6 +86,19 @@ class Beer{
        return x.renderBeerCard()
      })
     }
+     filterComments(){
+      let filtered = Comment.allComments.filter(comment => {
+          if(comment.beer_id === this.id){
+              return comment
+          }
+      })
+      commentContainer.innerHTML = ''
+     commentContainer.innerHtml = 
+     filtered.forEach(x => {
+        return  x.renderComments()
+     })
+    }
+   
  }
 
  
