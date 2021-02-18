@@ -9,16 +9,28 @@ class Beer{
             this.alcohol_percentage = alcohol_percentage
             this.link = link
             this.image = image
-            this.likes = likes 
+            this.likes = likes
+            this.renderBeerCard() 
             Beer.allBeers.push(this) 
     }
 
+  
+
     renderBeerCard(){
-      const beerDiv = document.getElementById('beer-list')
+   
       const beerContainer = document.createElement('div')
+      const form = document.createElement('form')
+        form.className = "comment-form"
+      const input = document.createElement('input')
+        input.type = 'text'
+        form.appendChild(input)
+      const formBtn = document.createElement('button')
+        formBtn.value = 'submit'
+        formBtn.innerText = 'Add Comment'
+        form.appendChild(formBtn)
       const p = document.createElement('p')
-      p.innerText = `${this.likes} Likes`
-      p.className = 'like-p'
+        p.innerText = `${this.likes} Likes`
+        p.className = 'like-p'
       const button = document.createElement('button')
       button.classList.add('like-btn')
       button.id = 'like-btn'
@@ -27,9 +39,11 @@ class Beer{
       beerContainer.className = "card"
       beerContainer.innerHTML += this.beerHTML()
       beerDiv.appendChild(beerContainer)
+      beerContainer.appendChild(form)
       beerContainer.appendChild(p)
       beerContainer.appendChild(button)
       button.addEventListener('click',(e) => this.updateLikes(e))
+      form.addEventListener('submit',(e) => createComment(e))
     }
 
     beerHTML(){
@@ -51,6 +65,26 @@ class Beer{
             body: JSON.stringify({"likes": this.likes})
         })
     }
+    
+
+ static sortByIbu = () => {
+    const sortedBeer = Beer.allBeers.sort(function(a,b){
+       return b.ibu - a.ibu
+     })
+     beerDiv.innerHTML = ""
+     sortedBeer.forEach(x =>{
+       return new Beer(x)
+     })
+    }
+    static sortByAp(){
+      const sort = Beer.allBeers.sort(function(a,b){
+        return b.alcohol_percentage - a.alcohol_percentage
+      })
+      beerDiv.innerHTML = ""
+       sort.forEach(x =>{
+       return new Beer(x)
+     })
+    }
+ }
 
  
-}

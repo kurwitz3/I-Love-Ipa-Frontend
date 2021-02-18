@@ -51,7 +51,7 @@ h1{
     margin-left: 100px;
 }
 .like-btn{
-   margin-left:130px ;
+   margin-left:180px ;
 }
 div.form{
 
@@ -66,20 +66,7 @@ form
     margin-right: auto;
     text-align: left;
 }
-.wrapper{
-  position: relative;
-    min-height: 20px;
-    background-color: rgb(7, 0, 0);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin-left: 1200px  ;
-    max-width: 450px;
-    padding: 5%; /* 18px / 800px */
-    width: 20%;
-    color:  rgb(250, 246, 246);
-    font-size: 25px;
-}
+
 h3{
     font-size: 35px;
     color: rgb(244, 241, 241);
@@ -160,6 +147,9 @@ h3{
 
   .dropdown{
     font: #f1f1f1; 
+  }
+  .comment-form{
+      margin-left: 100px;
   }
   
   

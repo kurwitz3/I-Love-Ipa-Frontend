@@ -1,20 +1,18 @@
 const addBeerForm = document.getElementById('add-form')
+let beerDiv = document.getElementById('beer-list')
+const ibuButton = document.getElementById('sort-ibu')
+const apButton = document.getElementById('sort-Ap')
 const commentUrl = 'http://localhost:3000/comments'
 const beerUrl = 'http://localhost:3000/beers'
-const commentForm = document.getElementById('add-comment')
+
 
 document.addEventListener('DOMContentLoaded',() =>{
   API.addBeers()
+  API.addComents()
   addBeerForm.addEventListener('submit',createBeer)
+  ibuButton.addEventListener('click', () => Beer.sortByIbu())
+  apButton.addEventListener('click',() => Beer.sortByAp())
 })
-
-function getBeers(beers){
-   beers.forEach(beer =>{
-       let newBeer = new Beer(beer)
-       newBeer.renderBeerCard()
-   })
-}
-
 function createBeer(e){
   e.preventDefault()
   const formBeerName = document.getElementById('beer_name').value
@@ -50,34 +48,10 @@ function createBeer(e){
     .catch((error) => { console.log(error.message) })
     addBeerForm.reset()
   }
+
+
+
  
-  function createComment(e){
-    e.preventDefault()
-    let content = document.getElementById('content').value
-    let beer_id = parseInt(document.getElementById('content').parentElement.id)
-    let beer = Beer.allBeers
-      for(let i = 0;i < beer.length;i++){
-         if(beer[i].id === beer_id){
-          return beer[i].beer_name
-         }
-      }
-    const commentData = {
-      name: beerName,
-      content: content,
-      beers_id: beer_id
-    }
-    const configObj = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(commentData)
-    }
-    fetch('http://localhost:3000/comments',configObj)
-    .then(resp => resp.json())
-    .then(json => new Comment(json))
-  }
   
   
    
