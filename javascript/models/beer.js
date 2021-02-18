@@ -13,38 +13,34 @@ class Beer{
             this.renderBeerCard() 
             Beer.allBeers.push(this) 
     }
-
-  
-
-    renderBeerCard(){
-   
-      const beerContainer = document.createElement('div')
-      const form = document.createElement('form')
-        form.className = "comment-form"
-      const input = document.createElement('input')
-        input.type = 'text'
-        form.appendChild(input)
-      const formBtn = document.createElement('button')
-        formBtn.value = 'submit'
-        formBtn.innerText = 'Add Comment'
-        form.appendChild(formBtn)
-      const p = document.createElement('p')
-        p.innerText = `${this.likes} Likes`
-        p.className = 'like-p'
-      const button = document.createElement('button')
-      button.classList.add('like-btn')
-      button.id = 'like-btn'
-      button.innerText = 'Like'
-      beerContainer.id = `${this.id}`
-      beerContainer.className = "card"
-      beerContainer.innerHTML += this.beerHTML()
-      beerDiv.appendChild(beerContainer)
-      beerContainer.appendChild(form)
-      beerContainer.appendChild(p)
-      beerContainer.appendChild(button)
-      button.addEventListener('click',(e) => this.updateLikes(e))
-      form.addEventListener('submit',(e) => createComment(e))
-    }
+ renderBeerCard(){
+    const beerContainer = document.createElement('div')
+    const form = document.createElement('form')
+      form.className = "comment-form"
+    const input = document.createElement('input')
+      input.type = 'text'
+      form.appendChild(input)
+    const formBtn = document.createElement('button')
+      formBtn.value = 'submit'
+      formBtn.innerText = 'Add Comment'
+      form.appendChild(formBtn)
+    const p = document.createElement('p')
+      p.innerText = `${this.likes} Likes`
+      p.className = 'like-p'
+    const button = document.createElement('button')
+    button.classList.add('like-btn')
+    button.id = 'like-btn'
+    button.innerText = 'Like'
+    beerContainer.id = `${this.id}`
+    beerContainer.setAttribute('class','card')
+    beerContainer.innerHTML += this.beerHTML()
+    beerDiv.appendChild(beerContainer)
+    beerContainer.appendChild(form)
+    beerContainer.appendChild(p)
+    beerContainer.appendChild(button)
+    button.addEventListener('click',(e) => this.updateLikes(e))
+    form.addEventListener('submit',createComment)
+  }  
 
     beerHTML(){
       return `
@@ -73,7 +69,7 @@ class Beer{
      })
      beerDiv.innerHTML = ""
      sortedBeer.forEach(x =>{
-       return new Beer(x)
+       return x.renderBeerCard()
      })
     }
     static sortByAp(){
@@ -81,8 +77,8 @@ class Beer{
         return b.alcohol_percentage - a.alcohol_percentage
       })
       beerDiv.innerHTML = ""
-       sort.forEach(x =>{
-       return new Beer(x)
+      sort.forEach(x =>{
+       return x.renderBeerCard()
      })
     }
  }

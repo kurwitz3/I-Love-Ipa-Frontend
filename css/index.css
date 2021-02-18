@@ -13,6 +13,7 @@ html {
         background: rgb(7, 7, 7);
         padding: 10px 10px;
         margin-right: 10px;
+        margin-bottom: 20px;
         max-width: 425px;
       
 
@@ -140,7 +141,7 @@ h3{
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
-    background-color: rgb(7, 7, 7); /* Black */
+    background-color: rgb(4, 4, 4); /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }
@@ -150,6 +151,10 @@ h3{
   }
   .comment-form{
       margin-left: 100px;
+  }
+  #comment{
+      color: #f1f1f1;
+      font-size: 20px;
   }
   
   

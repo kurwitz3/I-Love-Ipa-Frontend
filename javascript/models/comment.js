@@ -1,12 +1,12 @@
 class Comment{
     static allComments = []
-    contrsuctor({id,name,content,beer_id}){
+    constructor({id,name,content,beer_id}){
         this.id = id
         this.name = name 
         this.content = content
         this.beer_id = beer_id
         Comment.allComments.push(this)
-        this.renderComments()
+        
     }
 
     renderComments(){
@@ -18,10 +18,11 @@ class Comment{
     }
 
     commentHtml(){
-       `<ul>
-          <li>Beer: ${this.name}
+        return`<ul>
+          <li id="comment">Beer: ${this.name}<br>
               Comment: ${this.content}
           </li>
         </ul>`
+        
     }
 }

@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded',() =>{
   ibuButton.addEventListener('click', () => Beer.sortByIbu())
   apButton.addEventListener('click',() => Beer.sortByAp())
 })
+
 function createBeer(e){
-  e.preventDefault()
+   e.preventDefault()
   const formBeerName = document.getElementById('beer_name').value
   const formBeerStyle = document.getElementById('style').value
   const formIbu = document.getElementById('ibu').value
@@ -41,13 +42,40 @@ function createBeer(e){
     }
     fetch(beerUrl,configObj)
     .then(resp => resp.json())
-    .then(json =>{
-        let newBeer = new Beer(json)
-        newBeer.renderBeerCard()
-    })
+    .then(json =>{new Beer(json)})
+
     .catch((error) => { console.log(error.message) })
     addBeerForm.reset()
   }
+
+  function createComment(e){
+    e.preventDefault()
+    let content = e.target.firstElementChild.value
+    let beer_id = parseInt(e.target.parentElement.id)
+    let beerName = Beer.allBeers.find(x => {
+       if(x.id === beer_id){
+         return x.beer_name
+       }
+    })
+    
+    const formData = {
+      name: beerName.beer_name,
+      content: content,
+      beer_id: beer_id
+    }
+    const configObj = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }
+    fetch('http://localhost:3000/comments',configObj)
+      .then(resp => resp.json())
+      .then(json => { new Comment(json)})
+  }
+
 
 
 
