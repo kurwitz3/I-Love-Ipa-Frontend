@@ -24,4 +24,10 @@ class Comment{
         </ul>`
         
     }
+   static  commentButton(){
+        commentContainer.innerHTML = ''
+        Comment.allComments.forEach(comment =>{
+            return comment.renderComments()
+        })
+    }
 }

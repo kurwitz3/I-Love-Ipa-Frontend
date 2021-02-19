@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded',() =>{
   addBeerForm.addEventListener('submit',createBeer)
   ibuButton.addEventListener('click', () => Beer.sortByIbu())
   apButton.addEventListener('click',() => Beer.sortByAp())
+  allCbtn.addEventListener('click', () => Comment.commentButton())
 })
 
 function createBeer(e){
