@@ -44,7 +44,7 @@ class Beer{
     beerContainer.appendChild(p)
     beerContainer.appendChild(button)
     button.addEventListener('click',(e) => this.updateLikes(e))
-    form.addEventListener('submit',createComment)
+    form.addEventListener('submit',(e) => API.createComment(e))
     commentBtn.addEventListener('click',() => this.filterComments())
   }  
 
@@ -67,39 +67,38 @@ class Beer{
             body: JSON.stringify({"likes": this.likes})
         })
     }
-    
-
- static sortByIbu = () => {
+  
+  static sortByIbu = () => {
     const sortedBeer = Beer.allBeers.sort(function(a,b){
        return b.ibu - a.ibu
-     })
+    })
      beerDiv.innerHTML = ""
      sortedBeer.forEach(x =>{
        return x.renderBeerCard()
      })
-    }
-    static sortByAp(){
-      const sort = Beer.allBeers.sort(function(a,b){
-        return b.alcohol_percentage - a.alcohol_percentage
-      })
-      beerDiv.innerHTML = ""
-      sort.forEach(x =>{
-       return x.renderBeerCard()
-     })
-    }
-     filterComments(){
-      let filtered = Comment.allComments.filter(comment => {
-          if(comment.beer_id === this.id){
-              return comment
-          }
-      })
-      commentContainer.innerHTML = ''
-     commentContainer.innerHtml = 
-     filtered.forEach(x => {
-        return  x.renderComments()
-     })
-    }
-   
- }
+  }
+  
+  static sortByAp(){
+    const sort = Beer.allBeers.sort(function(a,b){
+      return b.alcohol_percentage - a.alcohol_percentage
+    })
+    beerDiv.innerHTML = ""
+    sort.forEach(x =>{
+     return x.renderBeerCard()
+    })
+  }
+  
+  filterComments(){
+    commentContainer.innerHTML = ''
+    let filtered = Comment.allComments.filter(comment => {
+       if(comment.beer_id === this.id){
+           return comment
+        }
+    })
+      filtered.forEach(x => {
+        return x.renderComments()
+    })
+  }
+}
 
  
