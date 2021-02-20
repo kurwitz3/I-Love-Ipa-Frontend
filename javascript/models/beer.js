@@ -19,6 +19,7 @@ class Beer{
       form.className = "comment-form"
     const input = document.createElement('input')
       input.type = 'text'
+      input.className = 'input-value'
       form.appendChild(input)
     const commentBtn = document.createElement('button')
       commentBtn.id = 'comment-btn'

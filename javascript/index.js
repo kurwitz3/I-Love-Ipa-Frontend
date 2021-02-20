@@ -4,6 +4,7 @@ const commentContainer = document.getElementById('cmt')
 const allCbtn = document.getElementById('all-comments')
 const ibuButton = document.getElementById('sort-ibu')
 const apButton = document.getElementById('sort-Ap')
+const inputValue = document.getElementsByClassName('input-value')
 const commentUrl = 'http://localhost:3000/comments'
 const beerUrl = 'http://localhost:3000/beers'
 
@@ -44,11 +45,17 @@ function createBeer(e){
       body: JSON.stringify(formData)
     }
     fetch(beerUrl,configObj)
-    .then(resp => resp.json())
+    .then(resp => {
+      if(!resp.ok){ 
+        window.alert("All fields must be complete")
+      }
+      else{
+        resp.json()
+      }
+    })
     .then(json =>{new Beer(json)})
-
     .catch((error) => { console.log(error.message) })
-    addBeerForm.reset()
+     addBeerForm.reset()
   }
 
   function createComment(e){
@@ -75,12 +82,21 @@ function createBeer(e){
       body: JSON.stringify(formData)
     }
     fetch(commentUrl,configObj)
-      .then(resp => resp.json())
-      .then(json => { new Comment(json)
-      
+      .then(resp => {
+        if(!resp.ok){ 
+          window.alert("All fields must be complete")
+        }
+        else { 
+        resp.json()
+        }
       })
+      .then(json => { new Comment(json)
+      })
+      .catch((error) => {
+        window.alert('Input field cannot be blank')
+      })
+      e.target.firstElementChild.value = ''
   }
-
 
 
 
