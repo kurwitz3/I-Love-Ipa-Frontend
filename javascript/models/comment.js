@@ -18,10 +18,10 @@ class Comment{
 
     commentHtml(){
         return`<ul id='ul'>
-          <li id="comment"><h4>Beer:   ${this.name}</h4>
-               ${this.content}
-          </li>
-        </ul>`
+                 <li id="comment"><h4>Beer:   ${this.name}</h4>
+                    ${this.content}
+                 </li>
+               </ul>`
         
     }
    static  commentButton(){

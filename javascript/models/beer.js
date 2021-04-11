@@ -13,7 +13,8 @@ class Beer{
             this.renderBeerCard() 
             Beer.allBeers.push(this) 
     }
- renderBeerCard(){
+ 
+  renderBeerCard(){
     const beerContainer = document.createElement('div')
     const form = document.createElement('form')
       form.className = "comment-form"
@@ -28,24 +29,24 @@ class Beer{
       formBtn.value = 'submit'
       formBtn.innerText = 'Add Comment'
       form.appendChild(formBtn)
-    const p = document.createElement('p')
-      p.innerText = `${this.likes} Likes`
-      p.className = 'like-p'
+    const likesP = document.createElement('p')
+      likesP.innerText = `${this.likes} Likes`
+      likesP.className = 'like-p'
     const button = document.createElement('button')
       button.classList.add('like-btn')
       button.id = 'like-btn'
       button.innerText = 'Like'
+  
     beerContainer.id = `${this.id}`
     beerContainer.setAttribute('class','card')
     beerContainer.innerHTML += this.beerHTML()
     beerDiv.appendChild(beerContainer)
-    beerContainer.appendChild(form)
-    beerContainer.appendChild(commentBtn)
-    beerContainer.appendChild(p)
-    beerContainer.appendChild(button)
+    beerContainer.append(form,commentBtn,likesP,button)
+    
     button.addEventListener('click',(e) => this.updateLikes(e))
     form.addEventListener('submit',(e) => API.createComment(e))
     commentBtn.addEventListener('click',() => this.filterComments())
+ 
   }  
 
     beerHTML(){
@@ -54,7 +55,7 @@ class Beer{
        <img class="img" src='${this.image}'>
        <p>Style: ${this.beer_style}</p>
        <p>Ibu: ${this.ibu}</p>
-       <p>Alcohol Percentage: ${this.alcohol_percentage}%</p>
+       <p id=AP >Alcohol Percentage: ${this.alcohol_percentage}%</p>
        <a href=${this.link} class="link"> Brewery Website</a><br>`
     }
 
@@ -78,7 +79,7 @@ class Beer{
      })
   }
   
-  static sortByAp(){
+  static sortByAp = () => {
     const sort = Beer.allBeers.sort(function(a,b){
       return b.alcohol_percentage - a.alcohol_percentage
     })
@@ -99,6 +100,10 @@ class Beer{
         return x.renderComments()
     })
   }
+
+  
 }
+
+
 
  
