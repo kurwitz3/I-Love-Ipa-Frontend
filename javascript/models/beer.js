@@ -62,7 +62,7 @@ class Beer{
     updateLikes(e){
       this.likes++
       e.target.parentElement.querySelector('.like-p').innerText = `${this.likes} Likes`
-       fetch(beerUrl/this.id,{
+       fetch(beerUrl,{
             method: 'PATCH',
             headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({"likes": this.likes})
