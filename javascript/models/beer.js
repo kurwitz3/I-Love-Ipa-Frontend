@@ -62,7 +62,7 @@ class Beer{
     updateLikes(e){
       this.likes++
       e.target.parentElement.querySelector('.like-p').innerText = `${this.likes} Likes`
-       fetch(`https://vast-gorge-17900.herokuapp.com/${this.id}`,{
+       fetch(beerUrl/this.id,{
             method: 'PATCH',
             headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({"likes": this.likes})
