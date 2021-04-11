@@ -5,8 +5,8 @@ const allCbtn = document.getElementById('all-comments')
 const ibuButton = document.getElementById('sort-ibu')
 const apButton = document.getElementById('sort-Ap')
 const inputValue = document.getElementsByClassName('input-value')
-const commentUrl = 'http://localhost:3000/comments'
-const beerUrl = 'http://localhost:3000/beers'
+const commentUrl = 'https://wonderful-lamarr-3ee816.netlify.app/comments'
+const beerUrl = 'https://wonderful-lamarr-3ee816.netlify.app'
 
 
 
