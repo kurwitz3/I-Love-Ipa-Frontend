@@ -44,7 +44,7 @@ class API{
       },
       body: JSON.stringify(formData)
     }
-     fetch(beerUrl,configObj)
+     fetch(`https://vast-gorge-17900.herokuapp.com/beers`,configObj)
       .then(resp => {
         if(!resp.ok){ 
           window.alert("All fields must be complete")
