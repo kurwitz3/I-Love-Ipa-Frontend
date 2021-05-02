@@ -2,6 +2,9 @@
 *Front end code 
 *[Back end here](https://github.com/kurwitz3/Backend)
 
+## Description
+***
+
 Welcome to I Love Ipa this app is an where craft beer lover can see diffent Ipa's from around the country
 write comments about their favorite one and even add their own to the app!
 
