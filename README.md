@@ -4,14 +4,15 @@
 
 ## Description
 
-Welcome to I Love IPA. This app is let's users see different Ipa's from around the country,
+Welcome to I Love IPA. This app let's users see different Ipa's from around the country,
 write comments about their favorite one, and even add their own to the app!
 
 ## Usage
-To open in the server run 
+To open in the browser run 
 ```bash
 open index.html
 ```
+You will also need to start the server in the backend. Instructions are located in the backend README.md.
 
 ## Contributing
 
