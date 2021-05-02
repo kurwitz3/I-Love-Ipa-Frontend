@@ -9,7 +9,8 @@ write comments about their favorite one, and even add their own to the app!
 
 ## Usage
 To open in the server run 
-```open index.html
+```bash
+open index.html
 ```
 
 
