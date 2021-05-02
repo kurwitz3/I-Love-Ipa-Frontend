@@ -7,9 +7,12 @@
 Welcome to I Love IPA. This app is let's users see diffent Ipa's from around the country,
 write comments about their favorite one, and even add their own to the app!
 
-## Installation
+## Usage
+To open in the server run 
+```open index.html
+```
 
-This app uses an Rails-Api backend and a javascript and css frontend. You can find the backend link above.
+
 
 Contributing Bug reports and pull requests are welcome on GitHub at https://github.com/'reliable-karma-5354'/I-Love-Ipa-Frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
