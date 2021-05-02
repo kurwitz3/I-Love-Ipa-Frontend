@@ -7,7 +7,7 @@
 Welcome to I Love IPA. This app is let's users see diffent Ipa's from around the country,
 write comments about their favorite one, and even add their own to the app!
 
-##Installation
+## Installation
 
 This app uses an Rails-Api backend and a javascript and css frontend. You can find the backend link above.
 
