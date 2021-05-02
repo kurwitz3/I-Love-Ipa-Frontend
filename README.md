@@ -4,7 +4,7 @@
 
 ## Description
 
-Welcome to I Love IPA. This app is let's users see diffent Ipa's from around the country,
+Welcome to I Love IPA. This app is let's users see different Ipa's from around the country,
 write comments about their favorite one, and even add their own to the app!
 
 ## Usage
