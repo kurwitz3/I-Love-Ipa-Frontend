@@ -3,10 +3,11 @@
 *[Back end here](https://github.com/kurwitz3/Backend)
 
 ## Description
-***
 
-Welcome to I Love Ipa this app is an where craft beer lover can see diffent Ipa's from around the country
-write comments about their favorite one and even add their own to the app!
+Welcome to I Love IPA. This app is let's users see diffent Ipa's from around the country,
+write comments about their favorite one, and even add their own to the app!
+
+##Installation
 
 This app uses an Rails-Api backend and a javascript and css frontend. You can find the backend link above.
 
