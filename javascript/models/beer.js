@@ -48,9 +48,9 @@ class Beer{
   }
 
   createViewCommentsBtn(){
-    commentBtn.id = 'comment-btn'
-    commentBtn.innerText = 'View Comments'
-    commentBtn.addEventListener('click',() => this.filterComments()) 
+    viewCommentBtn.id = 'comment-btn'
+    viewCommentBtn.innerText = 'View Comments'
+    viewCommentBtn.addEventListener('click',() => this.filterComments()) 
   }
   
   createLikes(){
