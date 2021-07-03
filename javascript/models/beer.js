@@ -1,3 +1,9 @@
+const commentForm = document.createElement('form')
+const viewCommentBtn = document.createElement('button')
+const likesP = document.createElement('p')
+const likesButton = document.createElement('button')
+const beerContainer = document.createElement('div')
+
 class Beer{
   static allBeers = []
     constructor({id,beer_name,beer_style,ibu,alcohol_percentage,
@@ -15,11 +21,6 @@ class Beer{
     }
    
   renderBeerCard(){
-    const commentForm = document.createElement('form')
-    const viewCommentBtn = document.createElement('button')
-    const likesP = document.createElement('p')
-    const likesButton = document.createElement('button')
-    const beerContainer = document.createElement('div')
     this.createBeerContainer()
     this.createCommentForm()
     this.createViewCommentsBtn()
