@@ -9,28 +9,26 @@ html {
 
 }
 .card{
-    
-        float: left;
-        background: rgb(7, 7, 7);
-        padding: 10px 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
-        max-width: 425px;
-      
-
-    
+    float: left;
+    background: rgb(7, 7, 7);
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    max-width: 425px;
 }
+
 h2{
  color: rgb(252, 251, 251);
  font-family: 'Courier New', Courier, monospace;
  font-size: 25px;
 }
+
 p{
     text-align: center;
     color: rgb(252, 251, 251);
-    font-size: 30px;
-    
+    font-size: 30px;   
 }
+
 .heading{
     text-align: center;
     font-size: 50px;
@@ -39,6 +37,7 @@ p{
     position: sticky;
     margin-right: 260px;
 }
+
 h1{
     text-align: center;
     font-size: 50px;
@@ -46,32 +45,33 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     position: sticky;
 }
+
 .link{
     color: rgb(41, 4, 249);
     font-size: 30px;
     text-align: center;
     margin-left: 100px;
 }
+
 .like-btn{
    margin-left:180px ;
 }
+
 div.form{
-
-    display: block;
-    text-align: left;
-
+  display: block;
+  text-align: left;
 }
-form
-{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+
+form{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 h3{
-    font-size: 35px;
-    color: rgb(244, 241, 241);
+  font-size: 35px;
+  color: rgb(244, 241, 241);
 }
 /* The sidebar menu */
 .sidenav {

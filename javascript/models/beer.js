@@ -11,63 +11,74 @@ class Beer{
             this.image = image
             this.likes = likes
             this.renderBeerCard() 
-            Beer.allBeers.push(this) 
+            Beer.allBeers.push(this)
     }
- 
+   
   renderBeerCard(){
-    const beerContainer = document.createElement('div')
-    const form = document.createElement('form')
-      form.className = "comment-form"
-    const input = document.createElement('input')
-      input.type = 'text'
-      input.className = 'input-value'
-      form.appendChild(input)
-    const commentBtn = document.createElement('button')
-      commentBtn.id = 'comment-btn'
-      commentBtn.innerText = 'View Comments'
-    const formBtn = document.createElement('button')
-      formBtn.value = 'submit'
-      formBtn.innerText = 'Add Comment'
-      form.appendChild(formBtn)
+    const commentForm = document.createElement('form')
+    const viewCommentBtn = document.createElement('button')
     const likesP = document.createElement('p')
-      likesP.innerText = `${this.likes} Likes`
-      likesP.className = 'like-p'
-    const button = document.createElement('button')
-      button.classList.add('like-btn')
-      button.id = 'like-btn'
-      button.innerText = 'Like'
-  
+    const likesButton = document.createElement('button')
+    const beerContainer = document.createElement('div')
+    this.createBeerContainer()
+    this.createCommentForm()
+    this.createViewCommentsBtn()
+    this.createLikes()
+    beerDiv.appendChild(beerContainer)
+    beerContainer.append(commentForm,viewCommentBtn,likesP,likesButton)
+  }  
+
+  createBeerContainer(){
     beerContainer.id = `${this.id}`
     beerContainer.setAttribute('class','card')
     beerContainer.innerHTML += this.beerHTML()
-    beerDiv.appendChild(beerContainer)
-    beerContainer.append(form,commentBtn,likesP,button)
-    
-    button.addEventListener('click',(e) => this.updateLikes(e))
-    form.addEventListener('submit',(e) => API.createComment(e))
-    commentBtn.addEventListener('click',() => this.filterComments())
- 
-  }  
+  }
 
-    beerHTML(){
-      return `
-       <h2 class="beer-name" align='center'>${this.beer_name}</h2>
-       <img class="img" src='${this.image}'>
-       <p>Style: ${this.beer_style}</p>
-       <p>Ibu: ${this.ibu}</p>
-       <p id=AP >Alcohol Percentage: ${this.alcohol_percentage}%</p>
-       <a href=${this.link} class="link"> Brewery Website</a><br>`
-    }
+  createCommentForm(){
+    const input = document.createElement('input')
+      commentForm.className = "comment-form"
+      input.type = 'text'
+      input.className = 'input-value'
+    const formBtn = document.createElement('button')
+      formBtn.value = 'submit'
+      formBtn.innerText = 'Add Comment'
+      commentForm.append(formBtn,input)
+      commentForm.addEventListener('submit',(e) => API.createComment(e))
+  }
 
-    updateLikes(e){
-      this.likes++
-      e.target.parentElement.querySelector('.like-p').innerText = `${this.likes} Likes`
-       fetch(`https://vast-gorge-17900.herokuapp.com/beers/${this.id}`,{
-            method: 'PATCH',
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify({"likes": this.likes})
-        })
-    }
+  createViewCommentsBtn(){
+    commentBtn.id = 'comment-btn'
+    commentBtn.innerText = 'View Comments'
+    commentBtn.addEventListener('click',() => this.filterComments()) 
+  }
+  
+  createLikes(){
+    likesP.innerText = `${this.likes} Likes`
+    likesP.className = 'like-p'
+    likesButton.classList.add('like-btn')
+    likesButton.id = 'like-btn'
+    likesButton.innerText = 'Like'
+    likesButton.addEventListener('click',(e) => this.updateLikes(e))
+  }
+
+  beerHTML(){
+    return `
+     <h2 class="beer-name" align='center'>${this.beer_name}</h2>
+     <img class="img" src='${this.image}'>
+     <p>Style: ${this.beer_style}</p>
+     <p>Ibu: ${this.ibu}</p>
+     <p id=AP >Alcohol Percentage: ${this.alcohol_percentage}%</p>
+     <a href=${this.link} class="link"> Brewery Website</a><br>`
+  }
+  updateLikes(e){
+    this.likes++
+    e.target.parentElement.querySelector('.like-p').innerText = `${this.likes} Likes`
+      fetch(`https://vast-gorge-17900.herokuapp.com/beers/${this.id}`,{
+          method: 'PATCH',
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({"likes": this.likes})
+      })
+  }
   
   static sortByIbu = () => {
     const sortedBeer = Beer.allBeers.sort(function(a,b){
@@ -100,8 +111,6 @@ class Beer{
         return x.renderComments()
     })
   }
-
-  
 }
 
 
