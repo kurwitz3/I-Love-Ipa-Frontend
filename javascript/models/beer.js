@@ -21,10 +21,10 @@ class Beer{
     }
    
   renderBeerCard(){
-    createBeerContainer()
-    createCommentForm()
-    createViewCommentsBtn()
-    createLikes()
+    this.createBeerContainer()
+    this.createCommentForm()
+    this.createViewCommentsBtn()
+    this.createLikes()
     beerDiv.appendChild(beerContainer)
     beerContainer.append(commentForm,viewCommentBtn,likesP,likesButton)
   }  
