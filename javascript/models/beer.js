@@ -1,9 +1,3 @@
-const commentForm = document.createElement('form')
-const viewCommentBtn = document.createElement('button')
-const likesP = document.createElement('p')
-const likesButton = document.createElement('button')
-const beerContainer = document.createElement('div')
-
 class Beer{
   static allBeers = []
     constructor({id,beer_name,beer_style,ibu,alcohol_percentage,
@@ -20,47 +14,40 @@ class Beer{
             Beer.allBeers.push(this)
     }
    
-  renderBeerCard(){
-    this.createBeerContainer
-    this.createCommentForm
-    this.createViewCommentsBtn
-    this.createLikes
-    beerDiv.appendChild(beerContainer)
-    beerContainer.append(commentForm,viewCommentBtn,likesP,likesButton)
-  }  
-
-  createBeerContainer(){
-    beerContainer.id = `${this.id}`
-    beerContainer.setAttribute('class','card')
-    beerContainer.innerHTML += this.beerHTML()
-  }
-
-  createCommentForm(){
-    const input = document.createElement('input')
-      commentForm.className = "comment-form"
-      input.type = 'text'
-      input.className = 'input-value'
-    const formBtn = document.createElement('button')
-      formBtn.value = 'submit'
-      formBtn.innerText = 'Add Comment'
-      commentForm.append(formBtn,input)
-      commentForm.addEventListener('submit',(e) => API.createComment(e))
-  }
-
-  createViewCommentsBtn(){
-    viewCommentBtn.id = 'comment-btn'
-    viewCommentBtn.innerText = 'View Comments'
-    viewCommentBtn.addEventListener('click',() => this.filterComments()) 
-  }
-  
-  createLikes(){
-    likesP.innerText = `${this.likes} Likes`
-    likesP.className = 'like-p'
-    likesButton.classList.add('like-btn')
-    likesButton.id = 'like-btn'
-    likesButton.innerText = 'Like'
-    likesButton.addEventListener('click',(e) => this.updateLikes(e))
-  }
+    renderBeerCard(){
+      const beerContainer = document.createElement('div')
+      const form = document.createElement('form')
+        form.className = "comment-form"
+      const input = document.createElement('input')
+        input.type = 'text'
+        input.className = 'input-value'
+        form.appendChild(input)
+      const commentBtn = document.createElement('button')
+        commentBtn.id = 'comment-btn'
+        commentBtn.innerText = 'View Comments'
+      const formBtn = document.createElement('button')
+        formBtn.value = 'submit'
+        formBtn.innerText = 'Add Comment'
+        form.appendChild(formBtn)
+      const likesP = document.createElement('p')
+        likesP.innerText = `${this.likes} Likes`
+        likesP.className = 'like-p'
+      const button = document.createElement('button')
+        button.classList.add('like-btn')
+        button.id = 'like-btn'
+        button.innerText = 'Like'
+    
+      beerContainer.id = `${this.id}`
+      beerContainer.setAttribute('class','card')
+      beerContainer.innerHTML += this.beerHTML()
+      beerDiv.appendChild(beerContainer)
+      beerContainer.append(form,commentBtn,likesP,button)
+      
+      button.addEventListener('click',(e) => this.updateLikes(e))
+      form.addEventListener('submit',(e) => API.createComment(e))
+      commentBtn.addEventListener('click',() => this.filterComments())
+   
+    }  
 
   beerHTML(){
     return `
