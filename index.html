@@ -1,70 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>I Love IPA</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/Beer.css">
+        <link rel="stylesheet" href="css/Comment.css">
+        <link rel="stylesheet" href="css/AddBeerForm.css">
+        <title>I Love IPA</title>
     </head>
-     <body>
-      <h1 class='heading'>Find your Favorite IPA!</h1>
-       <div id=beer-list></div><br>
-         <div class='comment' id="comment-container">
-           <h1>Comments</h1>
-           <button id="all-comments">View All Comments</button>
-           <div id="cmt">
-
-           </div>
-         </div>
-       </div> 
-        <div id="mySidenav" class="sidenav">
-          <div class="form">
-            <form id="add-form"  data-action="create">
-              <h3>Add Your Favorite IPA!</h3>
-                  
-                <div class="input-field">
-                    <label for="beer_name">Beer Name:</label>
-                  <input type="text" name="beer_name" id="beer_name">
-                
-                </div><br>
+    <body>
+       <h1 id='page__title'>Find your Favorite IPA!</h1>
+       <h3 class="sortBeer__h3">Sort By</h3>
+          <button class="all-buttons" id="sort-ibu">IBU</button><br>
+          <button class="all-buttons" id='sort-Ap'>Alcohol Percentage</button>
+      <div id='beer__container'>
         
-                <div class="input-field">
-                    <label for="beer_style">Beer Style:</label>
-                  <input type="text" name="style" id="style">
-                 
-                </div><br>
+      </div><br>
+           <div id="mySidenav" class="add-beer__container">
+               <h3 id="add-beer__title">Add Your Favorite IPA!</h3>
+               <hr class="comments__Line">
+                   <form id='addBeer-form' data-action="create">
+                     <label for="beer_name">Beer Name:</label>
+                     <input type="text" name="beer_name" class="add-beer__input" id="beer_name">
+                     
+                     <label for="beer_style">Beer Style:</label>
+                     <input type="text" name="style" class="add-beer__input" id='beer_style'>
+                     
+                     <label for="ibu">Ibu:</label>
+                     <input type="number" name="ibu" class="add-beer__input" id='beer_ibu'>
+                     
+                     <label for="alcohol_percentage">Alcohol Percentage:</label>
+                     <input type="number" name="alcohol_percentage" class="add-beer__input" id="beer_alcohol_percentage">
+                     
+                     <label for="link">Brewery Link:</label>
+                     <input type="url" name="link" class="add-beer__input" id="beer_breweryLink">
+                     
+                     <label for="image">Url Beer Image:</label>
+                     <input type="url" name="image" class="add-beer__input" id='beer_image'>
+                     
+                     <button type="submit" value="Add Beer" class="all-buttons" id="add-beer__btn">Add Beer</button>
+                   </form>
+           </div>
+           <div class='comments__container' id="comment-container">
+               <h2 id="comments__title">Comments</h2>
+               <hr class="comments__Line">
+               <button class="all-buttons" id="comments__viewAll-btn">View All Comments</button>
+               <div id='comment-div'>
 
-                <div class="input-field">
-                    <label for="ibu">Ibu:</label>
-                    <input type="number" name="ibu" id="ibu">
-                    
-                  </div><br>
-
-                  <div class="input-field">
-                    <label for="alcohol_percentage">Alcohol Percentage:</label>
-                    <input type="number" name="alcohol_percentage" id="alcohol_percentage">
-                    
-                  </div><br>
-
-                  <div class="input-field">
-                    <label for="link">Brewery Website Link:</label>
-                    <input type="url" name="link" id="link">
-                   
-                  </div><br>
-
-                  <div class="input-field">
-                    <label for="image">Url Link For Beer Image:</label>
-                    <input type="url" name="image" id="image">
-                    
-                  </div><br>
-                  <input type="submit" value="Add Beer" class="btn">
-                </form>
-                  <h3>Sort Beer:</h3>
-                  <button class="sortBtn" id="sort-ibu">IBU</button><br>
-                  <button class="sortBtn" id='sort-Ap'>Alcohol Percentage</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div id="comment-list"></div>
+               </div>
+           </div>
         <script type="text/javascript" src="javascript/models/comment.js"></script>
         <script type="text/javascript" src="javascript/models/beer.js"></script>
         <script type="text/javascript" src="javascript/services/API.js"></script>

@@ -1,166 +1,63 @@
 html {
-    background: url('https://i.pinimg.com/originals/f1/32/15/f13215a3276ab6f25339d39221caa4aa.jpg') no-repeat center fixed;
-    background-size: cover;
-  }
-.img{
-    height: 400px;
-    width: auto;
-    margin-left: 8px;
-
-}
-.card{
-    float: left;
-    background: rgb(7, 7, 7);
-    padding: 10px 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    max-width: 425px;
+   background: url('https://i.pinimg.com/originals/f1/32/15/f13215a3276ab6f25339d39221caa4aa.jpg') no-repeat center fixed;
+   background-size: cover;
 }
 
-h2{
- color: rgb(252, 251, 251);
- font-family: 'Courier New', Courier, monospace;
- font-size: 25px;
+#page__title {
+   color: rgb(250, 248, 248);
+   font-size: 2rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   text-align: center;
+   text-shadow: 4px 4px 4px black;
 }
-
-p{
-    text-align: center;
-    color: rgb(252, 251, 251);
-    font-size: 30px;   
+ 
+.sortBeer__h3 {
+   color: white;
+   font-size: 1.8rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   text-align: center;
+   text-shadow: 4px 4px 4px black;
+   margin-top: 70px;
 }
+ 
+@media (min-width: 37.4rem) {
 
-.heading{
-    text-align: center;
-    font-size: 50px;
-    color: rgb(250, 248, 248);
-    font-family: 'Courier New', Courier, monospace;
-    position: sticky;
-    margin-right: 260px;
+   #page__title {
+      font-size: 3rem;
+   }   
+   .sortBeer__h3 {
+      font-size: 2.4rem;
+   }
+   
+   #sort-ibu,
+   #sort-Ap {
+      font-size: 1.5rem;
+   }
 }
+ 
+@media (min-width: 81rem) {
 
-h1{
-    text-align: center;
-    font-size: 50px;
-    color: rgb(250, 248, 248);
-    font-family: 'Courier New', Courier, monospace;
-    position: sticky;
+   #page__title {
+      font-size: 3rem;
+      margin-right: 120px;
+   }   
+   
+   .sortBeer__h3 {
+      font-size: 2.4rem;
+      margin-right: 170px;
+   }
+   
+   #sort-Ap {
+      font-size: 1.3rem;
+      margin-left: 600px;
+   }
+   
+   #sort-ibu {
+      margin-left: 667px;
+   }
 }
-
-.link{
-    color: rgb(41, 4, 249);
-    font-size: 30px;
-    text-align: center;
-    margin-left: 100px;
-}
-
-.like-btn{
-   margin-left:180px ;
-}
-
-div.form{
-  display: block;
-  text-align: left;
-}
-
-form{
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-h3{
-  font-size: 35px;
-  color: rgb(244, 241, 241);
-}
-/* The sidebar menu */
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0px;
-    background-color: rgb(7, 7, 7); /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    color: rgb(250, 248, 248);
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Style page content */
-#beer-list {
-    margin-left: 215px ; /* Same as the width of the sidebar */
-    margin-right: 350px ;
-    padding: 0px 10px;
-    position: relative;
-  
-
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-#beer-list {
-    transition: margin-right .25s;
-    padding: 5px;
-  }
-  .comment-form{
-      color: #f1f1f1;
-      text-align: center;
-  }
-  .content{
-      font-size:20px ;
-  }
-  .comments{
-    float: right;
-    background: rgb(7, 7, 7);
-    padding: 10px 10px;
-    margin-right: 10px;
-    max-width: 425px;
-  
-  }
-  .comment {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 450px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: rgb(4, 4, 4); /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-  }
-
-  .dropdown{
-    font: #f1f1f1; 
-  }
-  .comment-form{
-      margin-left: 50px;
-  }
-  #comment{
-      color: #f1f1f1;
-      font-size: 20px;
-      font-family: 'Courier New', Courier, monospace;
-  }
-  #all-comments{
-      margin-left: 50px;
-  }
   
   
   

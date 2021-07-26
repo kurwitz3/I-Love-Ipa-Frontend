@@ -1,0 +1,175 @@
+#beer__container {
+   padding: 0px 10px;
+   position: relative;
+}
+ 
+.beer__card {
+   background: rgba(7, 7, 7, 0.419);
+   border-radius: 25px;
+   box-shadow: 2px 2px 20px 20px rgb(0, 0, 0);
+   padding: 10px 10px;
+   width: 250px;
+   display: block;
+   margin-top: 40px;
+   margin-bottom: 80px;
+   margin-left: auto;
+   margin-right: auto;
+}
+  
+.beer__name {
+   color: rgb(255, 255, 255);
+   font-size: 1.7rem;
+   font-weight: 500;
+   font-family: 'Courier New', Courier, monospace;
+   text-shadow: 4px 4px 4px black;
+   text-align: center;
+}
+  
+.beer__image {
+   border-radius: 8px;
+   box-shadow: 2px 2px 10px 8px rgb(0, 0, 0);
+   height: 230px;
+   width: auto;
+   margin-left: 8px;
+}
+  
+.beer__link {
+   color: rgb(5, 241, 225);
+   font-size: 1.3rem;
+   text-decoration: none;
+   position: relative;
+   top: 10px;
+   margin-left: 48px;
+}
+ 
+.beer__link:hover {
+   color: white;
+}
+  
+.beer__info {
+   color: rgb(255, 255, 255);
+   font-size: 1rem;
+   font-weight: 500;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   text-shadow: 4px 4px 4px black;
+}
+ 
+#comment-textarea {
+   margin-left: 37px;
+}
+  
+.all-buttons {
+   color: rgb(5, 241, 225);
+   font-size: 0.9rem;
+   text-shadow: 1px 1px 9px rgb(5, 241, 225);
+   background-color: black;
+   border-radius: 10px;
+   border: black;
+   box-shadow: 1px 1px 2px 2px rgb(5, 241, 225);
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+   padding: 8px;
+}
+  
+.all-buttons:hover {
+   color: white;
+   background-color: rgb(0, 0, 0);
+   box-shadow: 1px 1px 15px 2px rgb(5, 241, 225);
+}
+
+#view-comment-btn,
+#add-likes-btn {
+   margin-top: 30px;
+}
+ 
+#add-comment-btn {
+   margin-left: 70px;
+   margin-top: 10px;
+}
+ 
+@media (min-width: 37.4rem) {
+
+   .beer__card {
+      float: left;
+      box-shadow: 2px 2px 10px 10px rgb(0, 0, 0);
+      width: 290px;
+      margin-left: 40px;
+   }
+
+   .beer__name {
+      font-size: 1.2rem;
+   }
+
+   .beer__image {
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px 8px rgb(0, 0, 0);
+      height: 270px;
+      margin-left: 8px;
+   }
+
+   .beer__link {
+      font-size: 1.6rem;
+      top: 15px;
+      margin-left: 55px;
+   }
+    
+   .beer__info {
+      font-size: 1.2rem;
+   }
+
+   #comment-textarea {
+      margin-left: 60px;
+   }
+
+   #add-comment-btn {
+      margin-left: 90px;
+   }
+}
+ 
+@media (min-width: 81rem) {
+
+   #beer__container {
+      margin-right: 350px ;
+      margin-left: 215px ; 
+   }
+    
+   .beer__card {
+      box-shadow: 2px 2px 20px 20px rgb(0, 0, 0);
+      width: 370px;
+      margin-bottom: 80px;
+      margin-right: 50px;
+      margin-left: 30px;
+   }
+    
+   .beer__name {
+      font-size: 1.4rem;
+   }
+    
+   .beer__image {
+      height: 350px;
+   }
+    
+   .beer__link {
+      font-size: 2rem;
+      top: 20px;
+      margin-left: 80px;
+   }
+    
+   .beer__info {
+      font-size: 1.5rem;
+   }
+    
+   #comment-textarea {
+      margin-left: 95px;
+   }
+    
+   .all-buttons {
+      font-size: 1.1rem;
+   }
+    
+   #add-comment-btn {
+      margin-left: 121px;
+   }
+}

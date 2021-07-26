@@ -1,0 +1,101 @@
+.add-beer__container {
+   color: rgb(250, 248, 248);
+   background-color: rgba(7, 7, 7, 0); 
+   font-size: 1.1rem;
+   font-weight: 500;
+   font-family: 'Courier New', Courier, monospace;
+   height: 100%; 
+   width: 100%;
+   padding-top: 20px; 
+   overflow-x: hidden; 
+   z-index: 1; 
+}
+
+#add-beer__title {
+   color: rgb(244, 241, 241);
+   font-size: 2.8rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   text-shadow: 4px 4px 4px black;
+   text-align: center;
+}
+ 
+.add-beer__input {
+   font-size: 1rem;
+   border-radius: 10px;
+   box-shadow: 3px 3px 3px 3px rgb(0, 0, 0);
+   margin-top: 10px;
+   margin-left: 80px;
+}
+
+label {
+   color: rgb(5, 241, 225);
+   font-size: 1.3rem;
+   font-weight: 500;
+   text-shadow: 4px 4px 4px black;
+   display: block;
+   margin-top: 40px;
+   margin-left: 80px;
+}
+ 
+#add-beer__btn {
+   margin-left: 120px;
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+ 
+@media (min-width: 37.4rem) {
+
+   #add-beer__title {
+      font-size: 3.3rem;
+   }
+
+   .add-beer__input {
+      font-size: 1.5rem;
+   }   
+   
+   label {
+      font-size: 1.8rem;
+   }
+
+   #add-beer__btn {
+      font-size: 1.5rem;
+      margin-left: 150px;
+      margin-top: 50px;
+   }
+}
+ 
+@media (min-width: 81rem) {
+
+   .add-beer__container {
+       box-shadow: 15px 10px 10px 2px rgb(0, 0, 0);
+       height: 100%; 
+       width: 220px; 
+       position: fixed;
+       top: 0;
+   }
+    
+   #add-beer__title {
+      font-size: 1.9rem;
+      text-shadow: 4px 4px 4px black;
+   }
+    
+   .add-beer__input {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 0;
+   }
+    
+   label {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      margin-left: 0;
+   }
+    
+   #add-beer__btn {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-left: 20px;
+   }
+}

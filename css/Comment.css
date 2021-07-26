@@ -1,0 +1,96 @@
+.comments__container {
+   background-color: rgba(4, 4, 4, 0);
+   height: 100%; 
+   width: 100%; 
+   padding-top: 20px;
+   overflow-x: hidden; 
+   z-index: 1;
+}
+
+#comments__title {
+   color: white;
+   font-size: 2.8rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   text-align: center;
+   text-shadow: 5px 5px 5px black;
+}
+ 
+#comments__beerName {
+   color: rgb(5, 241, 225);
+   font-size: 1.7rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   text-shadow: 4px 4px 4px black;
+}
+  
+#comments {
+   color: #f1f1f1;
+   font-size: 1.3rem;
+   font-family: 'Courier New', Courier, monospace;
+   text-shadow: 3px 3px 3px rgb(0, 0, 0);
+   list-style: none;
+   margin-top: 60px;
+   margin-bottom: 80px;
+}
+ 
+.comments__Line {
+   border: 1px solid rgb(0, 0, 0);
+   box-shadow: 2px 2px 8px 2px rgb(5, 241, 225);
+   width: 100%;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+ 
+@media (min-width: 37.4rem) {
+
+   #comments__title {
+      font-size: 3.8rem;
+   }
+ 
+   #comments__viewAll-btn {
+      font-size: 1.5rem;
+   }
+  
+   #comments__beerName {
+      font-size: 2.2rem;
+   }
+ 
+   #comments {
+      font-size: 1.6rem;
+   }
+}
+ 
+@media (min-width: 81rem) {
+
+   .comments__container {
+      box-shadow: 10px 10px 10px 25px rgb(0, 0, 0);
+      height: 100%; 
+      width: 370px; 
+      position: fixed;  
+      top: 0; 
+      right: 0;
+      padding-top: 20px;
+      overflow-x: hidden; 
+      z-index: 1;
+   }
+    
+   #comments__title {
+      font-size: 2.8rem;
+   }
+
+   #comments__viewAll-btn {
+      font-size: 1rem;
+   }
+   
+   #comments__beerName {
+      font-size: 1.7rem;
+      text-shadow: 4px 4px 4px black;
+   }
+      
+   #comments {
+      font-size: 1.3rem;
+      margin-top: 60px;
+      margin-bottom: 80px;
+   }   
+}
