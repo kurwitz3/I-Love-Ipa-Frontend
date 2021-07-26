@@ -136,11 +136,14 @@
    }
     
    .beer__card {
+       float: right;
       box-shadow: 2px 2px 20px 20px rgb(0, 0, 0);
       width: 370px;
       margin-bottom: 80px;
       margin-right: 50px;
       margin-left: 30px;
+      position: relative;
+      right: 100px;
    }
     
    .beer__name {
