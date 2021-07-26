@@ -52,11 +52,15 @@ html {
    
    #sort-Ap {
       font-size: 1.3rem;
-      margin-left: 600px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
    }
    
    #sort-ibu {
-      margin-left: 667px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
    }
 }
   
